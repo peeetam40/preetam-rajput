@@ -63,7 +63,7 @@ e.preventDefault();
 const name=document.getElementById('name').value.trim();
 const contact=document.getElementById('contact').value.trim();
 const message=document.getElementById('message').value.trim();
-const phone=prompt('Enter your WhatsApp number with country code (example: 91XXXXXXXXXX). This number will receive enquiries.');
+const phone="918840357551";
 if(!phone)return;
 if(!/^\d{10,15}$/.test(phone)){alert('Enter a valid number with country code, digits only.');return;}
 const text='New enquiry for Preetam Rajput%0AName: '+encodeURIComponent(name)+'%0AContact: '+encodeURIComponent(contact)+'%0AMessage: '+encodeURIComponent(message);
