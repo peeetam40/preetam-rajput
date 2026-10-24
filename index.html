@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preetam Rajput</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#17243b}
+header{background:#142b45;color:white;padding:22px 18px}
+header h1{margin:0;font-size:27px}
+header p{margin-bottom:0;color:#d8e5f5}
+main{max-width:850px;margin:auto;padding:20px}
+.hero{background:#dcecff;padding:28px 20px;border-radius:16px}
+h2{color:#183c65}
+.btn{display:inline-block;background:#176bdb;color:white;padding:12px 18px;border-radius:8px;text-decoration:none;margin-top:10px}
+.card{background:white;padding:20px;border-radius:12px;margin-top:16px;box-shadow:0 2px 9px #0000000d}
+input,textarea{width:100%;padding:12px;margin:7px 0 12px;border:1px solid #ccd5e0;border-radius:7px;font:inherit}
+button{background:#176bdb;color:white;padding:12px 18px;border:0;border-radius:7px;font-size:16px}
+footer{text-align:center;padding:25px;color:#65758a}
+</style>
+</head>
+<body>
+<header>
+<h1>Preetam Rajput</h1>
+<p>Business Services & Opportunities</p>
+</header>
+<main>
+<section class="hero">
+<h2>Welcome to Preetam Rajput</h2>
+<p>Connect with local businesses, discover services and explore new opportunities.</p>
+<a class="btn" href="#contact">Contact Us</a>
+</section>
+<section class="card">
+<h2>Our Services</h2>
+<h3>Website Services</h3>
+<p>Simple websites for shops, professionals and small businesses.</p>
+<h3>Business Promotion</h3>
+<p>Helping businesses build an online presence.</p>
+<h3>Business Directory</h3>
+<p>Discover and connect with service providers.</p>
+</section>
+<section class="card" id="contact">
+<h2>Contact Us</h2>
+<p>Interested in working together? Send your enquiry.</p>
+<form id="contactForm">
+<label>Your Name</label>
+<input id="name" required placeholder="Enter your name">
+<label>Your Phone or Email</label>
+<input id="contact" required placeholder="Enter contact details">
+<label>How can we help?</label>
+<textarea id="message" required placeholder="Write your enquiry"></textarea>
+<button type="submit">Send Enquiry on WhatsApp</button>
+</form>
+<p id="status"></p>
+</section>
+</main>
+<footer>© 2026 Preetam Rajput</footer>
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(e){
+e.preventDefault();
+const name=document.getElementById('name').value.trim();
+const contact=document.getElementById('contact').value.trim();
+const message=document.getElementById('message').value.trim();
+const phone=prompt('Enter your WhatsApp number with country code (example: 91XXXXXXXXXX). This number will receive enquiries.');
+if(!phone)return;
+if(!/^\d{10,15}$/.test(phone)){alert('Enter a valid number with country code, digits only.');return;}
+const text='New enquiry for Preetam Rajput%0AName: '+encodeURIComponent(name)+'%0AContact: '+encodeURIComponent(contact)+'%0AMessage: '+encodeURIComponent(message);
+window.open('https://wa.me/'+phone+'?text='+text,'_blank');
+});
+</script>
+</body>
+</html>
