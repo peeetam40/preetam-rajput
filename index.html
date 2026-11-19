@@ -2,120 +2,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preetam Rajput</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f1f5f9;
-      color: #1e293b;
-    }
-    header {
-      background: #123b70;
-      color: white;
-      text-align: center;
-      padding: 35px 15px;
-    }
-    header h1 { margin: 0 0 10px; }
-    main {
-      max-width: 650px;
-      margin: 25px auto;
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px #00000012;
-    }
-    label {
-      display: block;
-      margin: 15px 0 6px;
-      font-weight: bold;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-    textarea { min-height: 110px; }
-    button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 18px;
-      border: 0;
-      border-radius: 8px;
-      background: #168447;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:active { opacity: 0.8; }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #64748b;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preetam Rajput | Business & Digital Services</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f5f7fb;color:#172033;line-height:1.6}
+header{background:#102b55;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header h2{font-size:23px}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px}
+.hero{background:linear-gradient(130deg,#102b55,#1769aa);color:white;text-align:center;padding:75px 20px}
+.hero h1{font-size:38px;margin-bottom:15px}
+.hero p{max-width:650px;margin:0 auto 25px;color:#e1eafa}
+.btn{display:inline-block;background:#16a36a;color:white;text-decoration:none;padding:12px 23px;border-radius:8px;font-weight:bold;margin:5px}
+.btn.secondary{background:white;color:#102b55}
+section{padding:55px 7%;scroll-margin-top:20px}
+.heading{text-align:center;margin-bottom:30px}
+.heading h2{font-size:29px;color:#102b55}
+.heading p{color:#667085}
+.about{background:white;text-align:center}
+.about p{max-width:750px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:25px;border-radius:13px;box-shadow:0 5px 20px #17203312}
+.card h3{color:#14518c;margin-bottom:10px}
+.join{background:#eaf2fc;text-align:center}
+.contact{background:white}
+form{max-width:600px;margin:auto}
+label{display:block;font-weight:bold;margin:14px 0 6px}
+input,textarea,select{width:100%;padding:13px;border:1px solid #ccd4df;border-radius:8px;font-size:16px}
+textarea{min-height:110px}
+button{width:100%;padding:15px;background:#15945d;color:white;border:0;border-radius:8px;font-size:16px;font-weight:bold;margin-top:18px;cursor:pointer}
+footer{background:#102b55;color:white;text-align:center;padding:25px}
+footer a{color:white}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Preetam Rajput</h1>
-    <p>Welcome to our website</p>
-  </header>
 
-  <main>
-    <div class="card">
-      <h2>Contact Us</h2>
-      <p>Fill in your details to send an enquiry.</p>
+<header>
+<h2>Preetam Rajput</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#directory">Directory</a>
+<a href="#join">Join Us</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-      <form id="contactForm">
-        <label for="name">Your Name</label>
-        <input id="name" required placeholder="Enter your name">
+<div class="hero" id="home">
+<h1>Welcome to Preetam Rajput</h1>
+<p>Your destination for business connections, digital services and new opportunities.</p>
+<a class="btn" href="#services">Explore Services</a>
+<a class="btn secondary" href="#join">Join Our Team</a>
+</div>
 
-        <label for="contact">Your Phone or Email</label>
-        <input id="contact" required placeholder="Enter contact details">
+<section class="about" id="about">
+<div class="heading">
+<h2>About Us</h2>
+<p>Connecting people, businesses and opportunities.</p>
+</div>
+<p>Preetam Rajput is a growing digital initiative focused on business networking, digital services and helping people discover new opportunities. Our goal is to build a useful platform for individuals and businesses.</p>
+</section>
 
-        <label for="message">Your Message</label>
-        <textarea id="message" required placeholder="Write your enquiry"></textarea>
+<section id="services">
+<div class="heading">
+<h2>Our Services</h2>
+<p>Explore our digital and business support services.</p>
+</div>
+<div class="grid">
+<div class="card">
+<h3>🌐 Website Services</h3>
+<p>Basic website creation and online presence support for businesses.</p>
+</div>
+<div class="card">
+<h3>📱 Digital Support</h3>
+<p>Digital information and online business assistance.</p>
+</div>
+<div class="card">
+<h3>🤝 Business Networking</h3>
+<p>Helping people discover business connections and opportunities.</p>
+</div>
+<div class="card">
+<h3>📢 Business Promotion</h3>
+<p>Helping businesses present their services to more people.</p>
+</div>
+</div>
+</section>
 
-        <button type="submit">Send Enquiry on WhatsApp</button>
-      </form>
-    </div>
-  </main>
+<section id="directory">
+<div class="heading">
+<h2>Business Directory</h2>
+<p>Discover local businesses and their services.</p>
+</div>
+<div class="card" style="text-align:center">
+<h3>Want to List Your Business?</h3>
+<p>Contact us to enquire about adding your business to our directory.</p>
+<a class="btn" href="#contact">Send Enquiry</a>
+</div>
+</section>
 
-  <footer>© Preetam Rajput</footer>
+<section class="join" id="join">
+<div class="heading">
+<h2>Join Our Team</h2>
+<p>Interested in working with us? Send us an enquiry.</p>
+</div>
+<a class="btn" href="#contact">Apply Now</a>
+</section>
 
-  <script>
-    const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+<section class="contact" id="contact">
+<div class="heading">
+<h2>Contact Us</h2>
+<p>Fill in your details to send an enquiry.</p>
+</div>
+<form id="contactForm">
+<label>Your Name</label>
+<input id="name" required placeholder="Enter your name">
 
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-      event.preventDefault();
+<label>Phone or Email</label>
+<input id="contactInfo" required placeholder="Enter contact details">
 
-      const name = document.getElementById("name").value.trim();
-      const contact = document.getElementById("contact").value.trim();
-      const message = document.getElementById("message").value.trim();
+<label>Enquiry Type</label>
+<select id="type">
+<option>General Enquiry</option>
+<option>Digital Services</option>
+<option>Business Directory</option>
+<option>Join Our Team</option>
+</select>
 
-      const text =
-        "New enquiry for Preetam Rajput\n" +
-        "Name: " + name + "\n" +
-        "Contact: " + contact + "\n" +
-        "Message: " + message;
+<label>Your Message</label>
+<textarea id="message" required placeholder="Write your message"></textarea>
 
-      const whatsappURL =
-        "https://wa.me/" + WHATSAPP_NUMBER +
-        "?text=" + encodeURIComponent(text);
+<button type="submit">Send Enquiry on WhatsApp</button>
+</form>
+</section>
 
-      window.location.href = whatsappURL;
-    });
-  </script>
+<footer>
+<p>© 2026 Preetam Rajput. All Rights Reserved.</p>
+<p>Business Services & Digital Platform</p>
+</footer>
+
+<script>
+const WHATSAPP_NUMBER = "918840357551";
+
+document.getElementById("contactForm").addEventListener("submit",function(e){
+e.preventDefault();
+
+const name=document.getElementById("name").value.trim();
+const contact=document.getElementById("contactInfo").value.trim();
+const type=document.getElementById("type").value;
+const message=document.getElementById("message").value.trim();
+
+const text="New Enquiry - Preetam Rajput\n"+
+"Name: "+name+"\n"+
+"Contact: "+contact+"\n"+
+"Enquiry: "+type+"\n"+
+"Message: "+message;
+
+window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(text),"_blank");
+});
+</script>
+
 </body>
-</html>
-
-
+  </html>
+  
