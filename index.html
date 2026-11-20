@@ -163,7 +163,27 @@ const text="New Enquiry - Preetam Rajput\n"+
 
 window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(text),"_blank");
 });
-</script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+
+import { getAuth } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
+
+import { getDatabase } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDyuaCql7nEfrbef9QCYiQw2c8J_2v1Kbw",
+  authDomain: "preetam-rajput-3fb3d.firebaseapp.com",
+  databaseURL: "https://preetam-rajput-3fb3d-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "preetam-rajput-3fb3d",
+  storageBucket: "preetam-rajput-3fb3d.firebasestorage.app",
+  messagingSenderId: "493546619048",
+  appId: "1:493546619048:web:94bff1d082698f904e429d",
+  measurementId: "G-9S0P9B2FEC"
+};
+  const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const database = getDatabase(app);
+  </script>
 
 </body>
   </html>
