@@ -143,6 +143,21 @@ footer a{color:white}
 <p>© 2026 Preetam Rajput. All Rights Reserved.</p>
 <p>Business Services & Digital Platform</p>
 </footer>
+  <section id="login">
+  <h2>Create Your Account</h2>
+
+  <input type="text" id="userName" placeholder="Enter Your Name">
+
+  <input type="email" id="userEmail" placeholder="Enter Your Email">
+
+  <input type="password" id="userPassword" placeholder="Create Password">
+
+  <button id="signupBtn">Create Account</button>
+
+  <button id="loginBtn">Login</button>
+
+  <button id="googleBtn">Login with Google</button>
+  </section>
 
 <script>
 const WHATSAPP_NUMBER = "918840357551";
@@ -166,7 +181,13 @@ window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(text),"
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
 
-import { getAuth } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
+  import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
 import { getDatabase } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -183,6 +204,41 @@ const firebaseConfig = {
   const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const database = getDatabase(app);
+  const googleProvider = new GoogleAuthProvider();
+
+document.getElementById("signupBtn").onclick = async () => {
+  const name = document.getElementById("userName").value;
+  const email = document.getElementById("userEmail").value;
+  const password = document.getElementById("userPassword").value;
+
+  try {
+    const result = await createUserWithEmailAndPassword(auth, email, password);
+    alert("Account created successfully!");
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+document.getElementById("loginBtn").onclick = async () => {
+  const email = document.getElementById("userEmail").value;
+  const password = document.getElementById("userPassword").value;
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    alert("Login successful!");
+  } catch (error) {
+    alert(error.message);
+  }
+};
+
+document.getElementById("googleBtn").onclick = async () => {
+  try {
+    await signInWithPopup(auth, googleProvider);
+    alert("Google login successful!");
+  } catch (error) {
+    alert(error.message);
+  }
+};
   </script>
 
 </body>
