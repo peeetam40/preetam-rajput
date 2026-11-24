@@ -38,6 +38,30 @@ footer{background:#102b55;color:white;text-align:center;padding:25px}
 footer a{color:white}
 </style>
 </head>
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/13.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDyuaCql7nEfrbef9QCYiQw2c8J_2v1Kbw",
+    authDomain: "preetam-rajput-3fb3d.firebaseapp.com",
+    databaseURL: "https://preetam-rajput-3fb3d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "preetam-rajput-3fb3d",
+    storageBucket: "preetam-rajput-3fb3d.firebasestorage.app",
+    messagingSenderId: "493546619048",
+    appId: "1:493546619048:web:94bff1d082698f904e429d",
+    measurementId: "G-9S0P9B2FEC"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+    </script>
 <body>
 
 <header>
@@ -73,7 +97,7 @@ footer a{color:white}
 <p>Explore our digital and business support services.</p>
 </div>
 <div class="grid">
-<div class="card">
+<div class="card">body
 <h3>🌐 Website Services</h3>
 <p>Basic website creation and online presence support for businesses.</p>
 </div>
